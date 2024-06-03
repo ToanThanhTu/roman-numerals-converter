@@ -1,0 +1,115 @@
+:root {
+  --dark-green: #243119;
+  --bone: #DED2BA;
+  --ecru: #BCA371;  
+  --coyote: #8B7241;
+  --sage: #A6B07E;
+  --wenge: #63535B;
+  --dark-purple: #241023;
+  --chocolate-cosmos: #660018;
+  --bright-pink: #F9B3BB;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 300px;
+  font-family: Open Sans, Arial, sans-serif;
+  background-color: var(--dark-green);
+  font-size: 10px;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body * {
+  border-radius: 10px;
+}
+
+#main-area {
+  width: 70%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10vh;
+  text-align: center;
+  background-color: var(--ecru);
+  padding: 20px;
+}
+
+#author-name, .title {
+  margin: 20px;
+}
+
+#author-name {
+  font-size: 3em;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 4em;
+}
+
+.input-area {
+  background-color: var(--dark-purple);
+  padding: 30px 10px;
+  color: white;
+  border: solid 2px white;
+}
+
+#input-label, #number, #convert-btn {
+  width: 70%;
+}
+
+#input-label {
+  font-size: 2.5em;
+}
+
+#number, #convert-btn, #output-result {
+  font-size: 3em;
+}
+
+#number {
+  padding: 10px;
+  margin: 20px;
+}
+
+#convert-btn {
+  height: 2em;
+  background: linear-gradient(var(--bone) 0%, var(--ecru) 70%, var(--coyote) 100%);
+  border: solid 3px var(--ecru);
+}
+
+#convert-btn:hover {
+  cursor: pointer;
+}
+
+#output {
+  margin: 20px auto;
+  background-color: var(--dark-purple);
+  color: white;
+  border: solid 2px white;
+  align-content: center;
+  display: none;
+}
+
+#output-result {
+  padding: 0.5em;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 6px;
+  }
+}
+
