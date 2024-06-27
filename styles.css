@@ -1,3 +1,4 @@
+/* Define custom CSS variables for colors */
 :root {
   --dark-green: #243119;
   --bone: #DED2BA;
@@ -10,37 +11,43 @@
   --bright-pink: #F9B3BB;
 }
 
+/* Apply box-sizing border-box model to all elements */
 *, *::before, *::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
+/* Styles for the root HTML element */
 html {
-  min-width: 300px;
+  min-width: 300px; /* Minimum width of the viewport */
   font-family: Open Sans, Arial, sans-serif;
   background-color: var(--dark-green);
-  font-size: 10px;
+  font-size: 10px; /* Base font size */
 }
 
-html, body {
-  height: 100vh;
+/* Styles for the body element */
+body {
+  box-sizing: border-box; /* Border-box model for the body */
 }
 
+/* Apply border-radius to all elements within body */
 body * {
   border-radius: 10px;
 }
 
+/* Styles for the main content area */
 #main-area {
   width: 70%;
   max-width: 700px;
-  margin: 0 auto;
-  margin-top: 10vh;
+  margin: 0 auto; /* Centering the main area horizontally */
+  margin-top: 10vh; /* Top margin based on viewport height */
   text-align: center;
   background-color: var(--ecru);
   padding: 20px;
 }
 
+/* Styles for the author name and the project title */
 #author-name, .title {
   margin: 20px;
 }
@@ -50,10 +57,11 @@ body * {
 }
 
 .title {
-  text-transform: uppercase;
+  text-transform: uppercase; /* Uppercase text for the project title */
   font-size: 4em;
 }
 
+/* Styles for input area */
 .input-area {
   background-color: var(--dark-purple);
   padding: 30px 10px;
@@ -61,6 +69,7 @@ body * {
   border: solid 2px white;
 }
 
+/* Styles for input label, number input, and convert button */
 #input-label, #number, #convert-btn {
   width: 70%;
 }
@@ -85,31 +94,47 @@ body * {
 }
 
 #convert-btn:hover {
-  cursor: pointer;
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Styles for output area */
 #output {
   margin: 20px auto;
   background-color: var(--dark-purple);
   color: white;
   border: solid 2px white;
   align-content: center;
-  display: none;
+  display: none; /* Initially hidden */
 }
 
 #output-result {
   padding: 0.5em;
 }
 
+/* Styles for footer */
+footer {
+  margin-top: 20px;
+  font-size: 13px;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+
+footer a {
+  color: var(--bright-pink); /* Link color using custom variable */
+}
+
+/* Media queries for responsive design */
 @media (max-width: 500px) {
   html {
-    font-size: 8px;
+    font-size: 8px; /* Adjusted font size for smaller screens */
   }
 }
 
 @media (max-width: 350px) {
   html {
-    font-size: 6px;
+    font-size: 6px; /* Further adjusted font size for smaller screens */
   }
 }
 
